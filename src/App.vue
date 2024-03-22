@@ -4,10 +4,10 @@
 
 <style>
 body {
-  background-color: rgb(25, 8, 69);
+  background-image: linear-gradient(to bottom right, #614385, #6d4efd);
 }
 #app {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   margin: 0px;
   font-family: Avenir, Helvetica, Arial, sans-serif;

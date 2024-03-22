@@ -1,16 +1,31 @@
 <template>
   <div class="categories-container">
     <p>TRYBY</p>
-    <transition name="left-to-right"></transition>
-    <transition name="right-to-left"></transition>
-    <div class="category category1">category 1</div>
-    <div class="category category2">category 2</div>
-    <div class="category category3">category 3</div>
-    <div class="category category4">category 4</div>
+    <transition name="left">
+      <div v-if="views === 1" class="category category1">Rozgrzewka</div>
+    </transition>
+    <transition name="right">
+      <div v-if="views === 1" class="category category2">Śmieszne</div>
+    </transition>
+    <transition name="left">
+      <div v-if="views === 1" class="category category3">Brudy</div>
+    </transition>
+    <transition name="right">
+      <div v-if="views === 1" class="category category4">Erotyczne</div>
+    </transition>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+const props = defineProps({
+  views: {
+    type: Number,
+    required: true,
+  },
+});
+console.log(props.views);
+</script>
 
 <style>
 p {
@@ -19,10 +34,14 @@ p {
   color: white;
 }
 .categories-container {
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
   gap: 20px;
   height: 100%;
   width: 100%;
@@ -31,7 +50,50 @@ p {
 .category {
   width: 94%;
   height: 130px;
-  background-color: rgb(2, 185, 254);
   border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.category1 {
+  background-image: linear-gradient(to right, #4e65ff, #92effd);
+}
+
+.category2 {
+  background-image: linear-gradient(to left, red, yellow);
+}
+
+.category3 {
+  background-image: linear-gradient(to right, #ff61d2, #fe9090);
+}
+
+.category4 {
+  background-image: linear-gradient(to left, #11998e, #38ef7d);
+}
+
+.left-enter-active,
+.left-leave-active,
+.right-enter-active,
+.right-leave-active {
+  transition: all 0.5s ease;
+}
+
+.left-enter-from,
+.left-leave-to {
+  transform: translateX(-100%);
+  /* opacity: 0; */
+}
+
+.right-enter-from,
+.right-leave-to {
+  transform: translateX(100%);
+  /* opacity: 0; */
+}
+
+.left-leave-from,
+.left-enter-to {
+  transform: translateX(0%);
+  /* opacity: 1; */
 }
 </style>
