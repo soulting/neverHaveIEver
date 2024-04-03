@@ -44,6 +44,7 @@
 
 <script setup>
 import { onMounted, ref } from "vue";
+import getQuestion from "@/composables/getQuestion.js";
 const props = defineProps({
   views: {
     type: Number,
@@ -64,13 +65,13 @@ const transitionCompleted = () => {
 };
 
 const goToQuestion = (questionCategory) => {
-  console.log(questionCategory);
+  getQuestion(questionCategory);
 };
 </script>
 
 <style>
 p {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Tahoma, sans-serif;
   font-size: 26px;
   color: white;
 }
@@ -80,11 +81,10 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Tahoma, sans-serif;
   font-size: 20px;
   font-weight: bold;
   gap: 20px;
-  height: 100%;
   width: 100%;
 }
 
