@@ -1,30 +1,71 @@
 <template>
   <div class="categories-container">
-    <p>TRYBY</p>
-    <transition name="left">
-      <div v-if="views === 1" class="category category1">Rozgrzewka</div>
+    <transition name="right">
+      <p v-if="views === 1 && mounted">TRYBY</p>
+    </transition>
+    <transition name="left" @after-leave="transitionCompleted">
+      <div
+        v-if="views === 1 && mounted"
+        class="category category1"
+        @click="goToQuestion('category1')"
+      >
+        Rozgrzewka
+      </div>
     </transition>
     <transition name="right">
-      <div v-if="views === 1" class="category category2">Śmieszne</div>
+      <div
+        v-if="views === 1 && mounted"
+        class="category category2"
+        @click="goToQuestion('category2')"
+      >
+        Śmieszne
+      </div>
     </transition>
     <transition name="left">
-      <div v-if="views === 1" class="category category3">Brudy</div>
+      <div
+        v-if="views === 1 && mounted"
+        class="category category3"
+        @click="goToQuestion('category3')"
+      >
+        Brudy
+      </div>
     </transition>
     <transition name="right">
-      <div v-if="views === 1" class="category category4">Erotyczne</div>
+      <div
+        v-if="views === 1 && mounted"
+        class="category category4"
+        @click="goToQuestion('category4')"
+      >
+        Erotyczne
+      </div>
     </transition>
   </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 const props = defineProps({
   views: {
     type: Number,
     required: true,
   },
 });
-console.log(props.views);
+
+const emit = defineEmits(["transitionCompleted"]);
+
+const mounted = ref(false);
+
+onMounted(() => {
+  mounted.value = true;
+});
+
+const transitionCompleted = () => {
+  emit("transitionCompleted");
+};
+
+const goToQuestion = (questionCategory) => {
+  console.log(questionCategory);
+};
 </script>
 
 <style>
@@ -82,18 +123,19 @@ p {
 .left-enter-from,
 .left-leave-to {
   transform: translateX(-100%);
-  /* opacity: 0; */
+  opacity: 0;
 }
 
 .right-enter-from,
 .right-leave-to {
   transform: translateX(100%);
-  /* opacity: 0; */
+  opacity: 0;
 }
 
-.left-leave-from,
+.right-leave-from,
+.right-enter-to .left-leave-from,
 .left-enter-to {
   transform: translateX(0%);
-  /* opacity: 1; */
+  opacity: 1;
 }
 </style>
