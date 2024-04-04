@@ -4,9 +4,10 @@
       v-if="showCategories"
       :views="views"
       @transitionCompleted="transitionCompleted"
+      @selectedCategory="selectedCategory"
     />
     <Question v-else />
-    <button class="next-button" @click="func">DALEJ</button>
+    <button v-if="views === 2" class="next-button" @click="func">DALEJ</button>
   </main>
 </template>
 
@@ -17,6 +18,11 @@ import { ref } from "vue";
 
 const views = ref(1);
 const showCategories = ref(true);
+
+const selectedCategory = (arg) => {
+  views.value = 2;
+  console.log(arg);
+};
 
 const transitionCompleted = () => {
   showCategories.value = false;

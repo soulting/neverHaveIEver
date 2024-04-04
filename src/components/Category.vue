@@ -52,7 +52,7 @@ const props = defineProps({
   },
 });
 
-const emit = defineEmits(["transitionCompleted"]);
+const emit = defineEmits(["transitionCompleted", "selectedCategory"]);
 
 const mounted = ref(false);
 
@@ -65,7 +65,7 @@ const transitionCompleted = () => {
 };
 
 const goToQuestion = (questionCategory) => {
-  getQuestion(questionCategory);
+  emit("selectedCategory", questionCategory);
 };
 </script>
 
