@@ -64,9 +64,13 @@ const transitionCompleted = () => {
   emit("transitionCompleted");
 };
 
-const goToQuestion = (questionCategory) => {
-  getQuestion(questionCategory);
-  emit("selectedCategory", questionCategory);
+const goToQuestion = async (questionCategory) => {
+  try {
+    const response = await getQuestion(questionCategory);
+    emit("selectedCategory", response);
+  } catch (error) {
+    console.error(error);
+  }
 };
 </script>
 

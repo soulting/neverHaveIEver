@@ -10,7 +10,7 @@ const getQuestion = async (questionCategory) => {
       throw new Error("loading the question failed");
     }
   } catch (error) {
-    console.error(error);
+    return error;
   }
 };
 

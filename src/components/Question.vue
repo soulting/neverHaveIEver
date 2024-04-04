@@ -1,14 +1,21 @@
 <template>
   <div class="question-container">
-    <h1>Coś tam</h1>
+    <h1>{{ activeQuestion }}</h1>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const props = defineProps({
+  activeQuestion: {
+    type: String,
+    required: true,
+  },
+});
+</script>
 
 <style>
 .question-container {
-  background-color: aqua;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
