@@ -7,7 +7,7 @@
       <div
         v-if="views === 1 && mounted"
         class="category category1"
-        @click="goToQuestion('category1')"
+        @click="goToQuestion('0')"
       >
         Rozgrzewka
       </div>
@@ -16,7 +16,7 @@
       <div
         v-if="views === 1 && mounted"
         class="category category2"
-        @click="goToQuestion('category2')"
+        @click="goToQuestion('1')"
       >
         Śmieszne
       </div>
@@ -25,7 +25,7 @@
       <div
         v-if="views === 1 && mounted"
         class="category category3"
-        @click="goToQuestion('category3')"
+        @click="goToQuestion('2')"
       >
         Brudy
       </div>
@@ -34,7 +34,7 @@
       <div
         v-if="views === 1 && mounted"
         class="category category4"
-        @click="goToQuestion('category4')"
+        @click="goToQuestion('3')"
       >
         Erotyczne
       </div>
@@ -65,6 +65,7 @@ const transitionCompleted = () => {
 };
 
 const goToQuestion = (questionCategory) => {
+  getQuestion(questionCategory);
   emit("selectedCategory", questionCategory);
 };
 </script>

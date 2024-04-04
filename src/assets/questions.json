@@ -1,48 +1,44 @@
 {
   "kategorie": [
     {
-      "Rozgrzewka": {
-        "pytania": [
-          "Nigdy w życiu nie wygrałem/wygrałam konkursu.",
-          "Nigdy w życiu nie pocałowałem/pocałowałam się w pierwszej randce.",
-          "Nigdy w życiu nie byłem/byłam na koncercie swojego ulubionego zespołu.",
-          "Nigdy w życiu nie skoczyłem/skoczyłam ze spadochronem.",
-          "Nigdy w życiu nie zrobiłem/zrobiłam spontanicznego wyjazdu na weekend."
-        ]
-      }
+      "pytania": [
+        "Nigdy w życiu nie wygrałem/wygrałam konkursu.",
+        "Nigdy w życiu nie pocałowałem/pocałowałam się w pierwszej randce.",
+        "Nigdy w życiu nie byłem/byłam na koncercie swojego ulubionego zespołu.",
+        "Nigdy w życiu nie skoczyłem/skoczyłam ze spadochronem.",
+        "Nigdy w życiu nie zrobiłem/zrobiłam spontanicznego wyjazdu na weekend."
+      ],
+      "id": "0"
     },
     {
-      "Brudy": {
-        "pytania": [
-          "Nigdy w życiu nie zaspałem/zaspałam na ważne spotkanie.",
-          "Nigdy w życiu nie jedłem/jadłam jedzenia spadającego na podłogę.",
-          "Nigdy w życiu nie zrobiłem/zrobiłam głupiego żartu na czyjś koszt.",
-          "Nigdy w życiu nie zepsułem/zepsułam czegoś u kogoś i to ukryłem/ukryłam.",
-          "Nigdy w życiu nie straciłem/straciłam telefonu po imprezie."
-        ]
-      }
+      "pytania": [
+        "Nigdy w życiu nie zaspałem/zaspałam na ważne spotkanie.",
+        "Nigdy w życiu nie jedłem/jadłam jedzenia spadającego na podłogę.",
+        "Nigdy w życiu nie zrobiłem/zrobiłam głupiego żartu na czyjś koszt.",
+        "Nigdy w życiu nie zepsułem/zepsułam czegoś u kogoś i to ukryłem/ukryłam.",
+        "Nigdy w życiu nie straciłem/straciłam telefonu po imprezie."
+      ],
+      "id": "1"
     },
     {
-      "Śmieszne": {
-        "pytania": [
-          "Nigdy w życiu nie wziąłem/wzięłam prysznica w deszczu.",
-          "Nigdy w życiu nie wysłałem/wysłałam wiadomości do niewłaściwej osoby.",
-          "Nigdy w życiu nie przeszedłem/przeszłam się po ulicy w przebraniu.",
-          "Nigdy w życiu nie zapomniałem/zapomniałam o urodzinach bliskiej osoby.",
-          "Nigdy w życiu nie przebudziłem/przebudziłam kogoś o 3 rano, dzwoniąc przez przypadek."
-        ]
-      }
+      "pytania": [
+        "Nigdy w życiu nie wziąłem/wzięłam prysznica w deszczu.",
+        "Nigdy w życiu nie wysłałem/wysłałam wiadomości do niewłaściwej osoby.",
+        "Nigdy w życiu nie przeszedłem/przeszłam się po ulicy w przebraniu.",
+        "Nigdy w życiu nie zapomniałem/zapomniałam o urodzinach bliskiej osoby.",
+        "Nigdy w życiu nie przebudziłem/przebudziłam kogoś o 3 rano, dzwoniąc przez przypadek."
+      ],
+      "id": "2"
     },
     {
-      "Erotyczne": {
-        "pytania": [
-          "Nigdy w życiu nie pocałowałem/pocałowałam się w trakcie tańca.",
-          "Nigdy w życiu nie rozebrałem/rozebrałam się w miejscu publicznym.",
-          "Nigdy w życiu nie wyszedłem/wyszłam z randki na śniadanie następnego dnia.",
-          "Nigdy w życiu nie kupiłem/kupiłam prezentu dla partnera/partnerki na zaskoczenie.",
-          "Nigdy w życiu nie zorganizowałem/zorganizowałam romantycznej kolacji przy świecach."
-        ]
-      }
+      "pytania": [
+        "Nigdy w życiu nie pocałowałem/pocałowałam się w trakcie tańca.",
+        "Nigdy w życiu nie rozebrałem/rozebrałam się w miejscu publicznym.",
+        "Nigdy w życiu nie wyszedłem/wyszłam z randki na śniadanie następnego dnia.",
+        "Nigdy w życiu nie kupiłem/kupiłam prezentu dla partnera/partnerki na zaskoczenie.",
+        "Nigdy w życiu nie zorganizowałem/zorganizowałam romantycznej kolacji przy świecach."
+      ],
+      "id": "3"
     }
   ]
 }
